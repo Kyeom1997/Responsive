@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <title>Welcome to Kyeom's page.</title>
+    <script 
+    src="https://kit.fontawesome.com/7a3a0b9aa8.js" 
+    crossorigin="anonymous"
+    ></script>
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar_logo">
+            <i class="far fa-grin-hearts"></i>
+            <a href="index.html">KyeomPage</a>
+        </div>
+        <ul class="navbar_menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Introduce.html">Introduce</a></li>
+            <li><a href="Gallery.html">Gallery</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+            <li><a href="Maps.html">Maps</a></li>
+        </ul>
+        <ul class="navbar_icons">
+            <li>
+                <a href="https://twitter.com/home?lang=ko"><i class="fab fa-twitter-square"></i></a></li>
+            <li>
+                <a href="https://www.facebook.com/profile.php?id=100007335764590"><i class="fab fa-facebook-square"></i></a></li>
+        </ul>
+       <a href="#" class="navbar_toggleBtn">
+        <i class="fas fa-bars"></i>
+       </a>
+    </nav>
+    <div id="map" style="width:500px;height:400px;"></div>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=3777390b3d09908b82f209d76c5baf33"></script>
+	<script>
+		var container = document.getElementById('map');
+		var options = {
+			center: new kakao.maps.LatLng(33.450701, 126.570667),
+			level: 3
+		};
+
+		var map = new kakao.maps.Map(container, options);
+	</script>
+</body>
+</html>
